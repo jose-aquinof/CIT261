@@ -1,0 +1,23 @@
+<!-- Using THIS 
+-	“This” in method refers to the owner object
+-	Alone, “this” refers to the global object
+-	In a function, “this” refers to the global object
+-	In a function, in strict mode, “this” is “undefined”
+-	In an event, “this” refers to the element that received the event
+-	Methods like “call()”, and “apply()” can refer “this” to any object
+
+Objects
+An object is what is sounds like: an Object!. For example:
+A car can be an object and this car can have properties like color of the car, brand, etc.
+On code each object that you create can have its own properties as well and you can access to it quickly.
+You can access object properties in two ways:
+objectName.propertyName
+or
+objectName["propertyName"]
+
+Events
+When JavaScript is used in HTML pages, JavaScript can “react” on these events
+And HTML event is something that the browser can do or the user can.
+For example: -->
+<!-- HTML button :--> <button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button> 
+<!-- HTML input:--> <button onclick="this.innerHTML = Date()">The time is?</button> 
