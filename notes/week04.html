@@ -1,0 +1,105 @@
+<!-- 
+In order to collect a lot of inputs or just one input from the user, using Forms helps a lot in HTML to make this possible.
+For example:
+When a user tries to sign up in a webpage, the program behind it needs to take that action and those values and store it somewhere 
+in the data. For example, you can use databases in order to store those information the user inputs. -->
+
+
+<form action="/phpmotors/accounts/index.php" method="post"> <!-- action_page.php -->
+  
+            
+    <ul class="container">
+    <li>
+    <label for="fName">First Name</label>
+    <input type="text" placeholder="Enter first name" name="clientFirstname">
+    </li>
+    <li>
+    <label for="lName">Last Name</label>
+    <input type="text" placeholder="Enter last name" name="clientLastname">
+    </li>
+    <li>
+    <label for="email">Email</label>
+    <input type="text" placeholder="Enter Email" name="clientEmail">
+    </li>
+    <li>
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter Password" name="clientPassword">
+    </li>
+    <li>
+    <input type="submit" name="submit" id="regbtn" value="Register">
+    <input type="hidden" name="action" value="register">
+    </li>          
+    </ul>
+    <!-- <button id="but" type="submit">Register</button>   -->
+</form>
+
+<!-- 
+This is a login output for HTML that is contained in a Form using the method "Post" in order to post those results and save them.
+
+And this is how you store the data: -->
+
+<!-- Filter and store the data -->
+
+            $invMake = filter_input(INPUT_POST, 'invMake');
+            $invModel = filter_input(INPUT_POST, 'invModel');
+            $invDescription = filter_input(INPUT_POST, 'invDescription');
+            $invImage = filter_input(INPUT_POST,'invImage');
+            $invThumbnail = filter_input(INPUT_POST, 'invThumbnail');
+            $invPrice = filter_input(INPUT_POST,'invPrice');
+            $invStock = filter_input(INPUT_POST,'invStock');
+            $invColor = filter_input(INPUT_POST, 'invColor');
+            $selectOption = filter_input(INPUT_POST, 'classiOption');
+ 
+<!-- Forms are very important in HTML, and as you keep making apps that will need to store information for the user, this is something you will constantly be using. -->
+
+
+<!-- Object Oriented Programming 
+
+- OOP is faster and easier to execute
+- OOP provides a clear structure for the programs
+- OOP helps to keep the JavaScript code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug
+- OOP makes it possible to create full reusable applications with less code and shorter development time
+
+
+Using Object Oriented Programming will make everything easier for you to write code and also if you are constantly making a lot of programms you can copy some functions
+that will help you to use them in many different occasions.
+
+-->
+
+<!-- This following code is an example of a class in javascript / very useful when using OOP. -->
+<script>
+class ClassName {
+    constructor() { ... }
+    method_1() { ... }
+    method_2() { ... }
+    method_3() { ... }
+    }
+  }
+</script>
+
+<!-- Objects are very important to use in OOP and you can make also interact with it and add some extra values -->
+<script>
+var car = "Fiat";
+var car = {type:"Fiat", model:"500", color:"white"};
+</script>
+
+
+<!-- NOW we know about classes and objects. You can see it in this way: and object can be a Car and a function is to know what the car can do
+FOR EXAMPLE:
+If can a car can not just moving forward but also reverse, you will make a function called reverse that will take the object car.
+This is a good way to understand their functionality and organize your code -->
+
+
+
+<!-- MODERN JAVASCRIPT DEVELOPMENT
+
+Modern javascript is an amazing tool that helps developers to make their code easy to interact with the many different libraries Javascript offers.
+In my personal oppinion, I would like to explain more about it; however, it comes to the point that there are so many functionalites I can use through this
+that I feel a begginer at it still. 
+
+DOM and Jquery are very great tools every developer needs to udnerstand. It will make posible for you to write code faster and make it more dynamic.
+
+Very usefult for programs like I mentiones before (log in and sign up) or programs like ToDo tasks
+
+
+-->
