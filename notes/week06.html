@@ -1,0 +1,131 @@
+<!-- every function follow this pattern -->
+<script>
+    function name (param) {
+        statements
+    }
+</script>
+ <!-- 
+ name = The function name
+ param = the name of an argument to be passed to the functions
+ statements = the statement comprising the body of the function 
+-->
+ 
+<!-- There are other ways to make a function as well -->
+
+<script>
+    var myFunction = function () {
+        statements
+    }
+</script>
+
+<!-- OR -->
+
+<script>
+    var myFunction = function namedFunction() {
+        statements
+    }
+</script>
+
+<!-- A recursive function is a function that calls itself until it doesn’t. And this technique is called recursion.
+
+Suppose that you have a function called recurse(). The recurse() is a recursive function if it calls itself
+ inside its body, like this: -->
+
+ <script>
+     function recurse() {
+    // ...
+    recurse();
+    // ...
+}
+ </script>
+
+<!-- A recursive function always has a condition to stop calling itself, otherwise, it will call itself indefinitely.
+ So a recursive function typically looks like the following: -->
+
+ <script>
+     function recurse() {
+    if(condition) {
+        // stop calling itself
+        //...
+    } else {
+        recurse();
+    }
+}
+ </script>
+
+<!-- The following code illustrates this by asking the computer a really hard question that causes 
+an infinite back-and-forth between two functions. Rather, it would be infinite, if the computer 
+had an infinite stack. As it is, we will run out of space, or “blow the stack”. -->
+
+<script>
+    function chicken() {
+    return egg();
+  }
+  function egg() {
+    return chicken();
+  }
+  console.log(chicken() + " came first.");
+  // → ??
+</script>
+
+<!-- 
+AJAX = Asynchronous JavaScript And XML
+AJAX is a developer's dream, because you can:
+
+Update a web page without reloading the page
+Request data from a server - after the page has loaded
+Receive data from a server - after the page has loaded
+Send data to a server - in the background 
+-->
+
+
+<!-- Function loadDoc() -->
+
+<script>
+    function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+}
+</script>
+
+<!-- "ajax_info.txt" looks like this: -->
+
+<h1>AJAX</h1>
+<p>AJAX is not a programming language.</p>
+<p>AJAX is a technique for accessing web servers from a web page.</p>
+<p>AJAX stands for Asynchronous JavaScript And XML.</p>
+
+
+
+<!-- AJAX works like this -->
+
+<a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.javatpoint.com%2Fhow-ajax-works&psig=AOvVaw2Fb0MqtHf8zbhBcSjJH0gL&ust=1604309240539000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJji8OaD4ewCFQAAAAAdAAAAABAD"> LINK for AJAX</a>
+
+<!-- Uploading JSON data -->
+
+<!-- Use fetch() to POST JSON-encoded data -->
+
+<script>
+    const data = { username: 'example' };
+
+fetch('https://example.com/profile', {
+  method: 'POST', // or 'PUT'
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+.then(response => response.json())
+.then(data => {
+  console.log('Success:', data);
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
+</script>
