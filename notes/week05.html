@@ -1,0 +1,69 @@
+<!-- CODE debugging
+
+A lot of our programming can come up with a lot of errors.
+Yeah! we have our own method to correct them sometimes, we search for the error on Google
+and most of the time they have the right answer for you
+HOWEVER
+if your code runs perfectly but the output is not the one you were expecting. You will see that 
+the program won't tell you what kind of error is happening, it will just run and every functions you made
+will run.
+For this situations is very important to know how to debug programs, and in Javascript is more dynamic to do this
+because it makes you debug and see the result almost inmediately in your page.
+If you want to learn how to debug I will definitely recommend to start doing it on JavaScript
+
+-->
+
+<!-- Here I will show a list of all the debugger JavaScript offers, there might be more other options
+However, these are the most important wants every front-end developer needs to master -->
+
+<!-- The console.log() Method -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+
+<script>
+a = 5;
+b = 6;
+c = a + b;
+console.log(c);
+</script>
+
+</body>
+</html>
+
+<!-- This is a simple example of using console.log(). the variable c is the result of adding a and b together
+and if you want to see the result of it you can output it on the webpage or just use console.log().
+right click your page, go to inspects and select the tab console. It will show the result of your math
+
+This can be use to place data that you want to check if it is obtaining the right value-->
+
+<!-- Debugger Keyword -->
+
+<!-- Using this debugger keyword helps you to stop on a certain part of your code to see if everythin is working 
+propertly before executin the other parts of the code.
+For example -->
+<script>
+var x = 15 * 5;
+debugger;
+document.getElementById("demo").innerHTML = x;
+</script>
+
+<!-- this function will stop on the 2 line before the innerhtml runs. It will show you what the variable x
+is containing before it displays it to the html.  -->
+
+
+<!-- The most important way to debug a program is to use the DevTools  
+This can be something tedious as first but once you know what you are doing when you use it, it makes it
+very simple to debug programs that have a lot of functions.
+There are some options in the DevTools where you can go through every line of the code, skip functions
+go into a function, etc.
+
+I usually use this everytime I need to debug something because of how efficient it is.-->
+
+
+<!-- FUN FACT :
+     Debugging is the process of testing, finding, and reducing bugs (errors) in computer programs. 
+     The first known computer bug was a real bug (an insect) stuck in the electronics. -->

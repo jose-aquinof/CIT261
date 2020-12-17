@@ -1,0 +1,98 @@
+<!-- // Form Validations are very important to use in frontend 
+// it can also be done by JavaScript
+
+// for example if a filed(fname) is empty, validation forms alers with a message, and returns false
+// to prevent the form being submitted -->
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+  }
+</script>
+<!-- // We learned about alerts on week 09, so you will get a popup window is the form is not validated. or 
+// something is missing.  -->
+
+
+<!-- // in this example we can see that in html the function validateForm() can be called using the onsubmit inside
+// a form tag -->
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+Name: <input type="text" name="fname">
+<input type="submit" value="Submit">
+</form>
+
+
+
+
+<!-- In this example you can see an input box where you can it is mentioned to the user to type between
+1 to 10, if the user types 0, for example, the form validation will be activated to inform the user that 
+the input value is not accepted -->
+<h2>JavaScript Can Validate Input</h2>
+
+<p>Please input a number between 1 and 10:</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x, text;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("numb").value;
+
+  // If x is Not a Number or less than one or greater than 10
+  if (isNaN(x) || x < 1 || x > 10) {
+    text = "Input not valid";
+  } else {
+    text = "Input OK";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+<!-- Form validations are very important to use in APIs
+you need to make sure you are getting the right data you are requesting
+ -->
+
+ <!-- Using the checkValidty() Method returns true if an input element contains valid data -->
+ <script>
+  function myFunction() {
+    var inpObj = document.getElementById("id1");
+    if (!inpObj.checkValidity()) {
+      document.getElementById("demo").innerHTML = inpObj.validationMessage;
+    }
+  }
+  </script>
+
+  <!--Using HTMLSelectElement.setCustomValidity() method sets the custom validity message for the selection 
+    element to the specified message. Use the empty string to indicate that the element does not have a 
+    custom validity error.  
+  
+  For example:
+-->
+<script>
+selectElt.setCustomValidity(string);
+</script>
+
+<!-- Here the string contains the error message -->
+
+<!-- on Week09 I mentioned how to use Fetch functions. Now I want to reinforce a little more on that topic
+ We know this is a good example of using Fetch 
+-->
+<script>
+fetch('http://example.com/movies.json')
+  .then(response => response.json())
+  .then(data => console.log(data));
+</script>
+
+<!-- Fetch function takes one argument which is the link to your API where you can obtained all the information
+needed, this returns the Response object
+
+This HTTPS response i no the JSON file we are looking for. For this reason we use the json() method (Defined on 
+body mixin)-->

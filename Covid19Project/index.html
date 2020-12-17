@@ -1,0 +1,120 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../Covid19Project/style.css" />
+
+    <title>COVID-19</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo"><h1>CORONA</h1></div>
+        <ul class="list-items">
+          <li class="list"><a href="index.html" class="link">HOME</a></li>
+
+          <li class="list"><a href="about.html" class="link">About</a></li>
+
+          <li class="list"><a href="contact.html" class="link">Contact</a></li>
+        </ul>
+      </nav>
+  <div class="main">	
+		<div class="main-left">     
+                <h2>GLOBAL</h2>
+                <br>
+                <h4>Total Confirmed</h4>
+                <h2 id="cases"></h2>
+                <br><br>
+                <h4>Deaths</h4>
+                <h2 id="deaths"></h2>
+                <br><br>
+                <h4>% of Deaths</h4>
+                <h2 id="percent"></h2>
+                <br><br>
+            
+                <h4>New Confirmed</h4>
+                <h2 id="population"></h2>
+                <br><br>
+                <h4>Last Updated</h4>
+                <h2 id="update"></h2>    
+
+                <br><br>
+
+                
+                <br>
+
+                <h2> Select your country: </h2>
+                <select id="select" onchange="getSelectValue()">
+                    <option selected>Select country</option>
+                </select>
+                <br><br>
+          
+               
+          
+                <table id ="results">
+                  <tr>
+                    <th>Country</th>
+                    <th>Confirmed</th>
+                    <th>Deaths</th>
+                    <th>Recovered</th>
+                    <th id="newConf">New Confirmed</th>
+                  </tr>
+                  <tr>
+                    <td id="Country"></td>
+                    <td id="TotalCon"></td>
+                    <td id="TotalDe"></td>
+                    <td id="TotalRec"></td>
+                    <td id="NewConf"></td>
+                  </tr>
+                </table>
+
+                <footer id="footer1">
+                  <br><br>
+                  <hr>
+                  Created by Jose Aquino. | Information provided by <a href="https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest">PostMan Covid-19 API</a></footer>
+             
+                 
+    </div>
+
+       
+    <div class="main-right">
+          <img
+            class="img-v"
+            src="http://www.pngall.com/wp-content/uploads/4/Coronavirus-Germs-PNG-File.png"
+            alt=""
+          />
+          <p>COVID-19</p>
+        </div>
+
+        
+  </div>
+
+      <div class="right-bar">
+        <a class="search" href="#"><i class="fas fa-search"></i></a>
+        <div class="icons">
+          <a href="https://www.youtube.com/watch?v=RcRw-f2LcA0" class="icon-btn"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="icon-btn"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="icon-btn"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.facebook.com/coronaviruscovid19live" class="icon-btn"><i class="fab fa-facebook"></i></a>
+        </div>
+        
+      </div>
+      
+      
+
+    </header>
+    
+    <script type="text/javascript" src="../Covid19Project/scripts.js" ></script>
+    <section></section>
+  </body>
+</html>
+
